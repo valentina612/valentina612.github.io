@@ -1,0 +1,276 @@
+:root {
+  --primary: #FDB92D;
+}
+
+/***************** intro ********************/
+.home-intro {
+  position: relative;
+  margin-bottom: 3em;
+
+  & > .content {
+    position: relative;
+    padding: 8em 0 8em 30%;
+    z-index: 2;
+
+    & h1 {
+      font-size: 4em;
+    }
+  }
+
+  & > .letter {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 18em;
+    width: auto;
+    z-index: 1;
+  }
+}
+
+.home-bg {
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  z-index: 0;
+
+  & div {
+    position: absolute;
+  }
+  & img {
+    width: auto;
+  }
+
+  & > .bg-col-1 {left: 10%;}
+  & > .bg-col-2 {left: 30%;}
+  & > .bg-col-3 {left: 50%;}
+  & > .bg-col-4 {left: 70%;}
+  & > .bg-col-5 {left: 90%;}
+  & > .bg-line > img {height: 100%;}
+  & > .bg-shape {
+    width: 2em;
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    will-change: top, opacity;
+    transition: transform .5s ease;
+    &.-hover {
+      transform: translateX(-50%) scale(1.5);
+      & > img {
+        transform-origin: 50% 50%;
+        animation: shape-pop .5s ease-in-out infinite;
+      }
+    }
+  }
+  & > .bg-shape-1 {animation: shape-move 16s linear -0s infinite;}
+  & > .bg-shape-2 {animation: shape-move 14s linear -6s infinite;}
+  & > .bg-shape-3 {animation: shape-move 12s linear -4s infinite;}
+  & > .bg-shape-4 {animation: shape-move 17s linear -10s infinite;}
+  & > .bg-shape-5 {animation: shape-move 10s linear -7s infinite;}
+  & > .bg-shape-6 {animation: shape-move 15s linear -10s infinite;}
+  & > .bg-shape-7 {animation: shape-move 18s linear -3s infinite;}
+}
+
+@keyframes shape-move{
+  from { top: 0; opacity: 0;}
+  5% { opacity: 1;}
+  95% { opacity: 1;}
+  to   { top: 100%; opacity: 0;}
+}
+
+@keyframes shape-pop{
+  from {transform: scale(1)}
+  50% {transform: scale(1.2)}
+  to {transform: scale(1)}
+}
+
+
+/***************** projects ********************/
+.home-projects {
+  display: grid;
+  grid-template-columns: 10fr 2fr 3fr 2fr 10fr;
+  grid-gap: 5em 3em;
+  align-items: center;
+
+  & h2 {
+    font-size: 3em;
+  }
+
+  & > .hero-container {
+    text-align: center;
+
+    &.-padding {
+      padding: 1em;
+    }
+
+    & > img {
+      width: auto;
+      max-width: 100%;
+      max-height: 30em;
+      margin-bottom: -.5em;  /* offset the white space gap */
+    }
+  }
+
+  & > .grid-left.text{grid-column: 1/3;}
+  & > .grid-left.hero-container {grid-column: 1/5;}
+  & > .grid-right.text{grid-column: 4/6;}
+  & > .grid-right.hero-container {grid-column: 2/6;}
+  & > .grid-row1 {grid-row: 1/2;}
+  & > .grid-row2 {grid-row: 2/3;}
+  & > .grid-row3 {grid-row: 3/4;}
+  & > .grid-row4 {grid-row: 4/5;}
+  & > .grid-row5 {grid-row: 5/6;}
+
+  & .month,
+  & .year {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+  }
+  & .year {
+    margin-left: 1.5em;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1.6em;
+      top: 0;
+      height: 1px;
+      width: 2.5em;
+      background: #000;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.left-space {
+  margin-left: 4em;
+}
+
+.left-line {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -4em;
+    top: .7em;
+    background: var(--primary);
+    height: .3em;
+    width: 3em;
+  }
+}
+
+.-cosigner-hero {
+  padding-right: 5em;
+}
+
+/***************** contacts ********************/
+.home-contacts-container{
+  margin-top: 10em;
+  text-transform: uppercase;
+
+  & svg{
+    display: block;
+    margin: 0 auto 1em;
+  }
+}
+
+.contact:hover{
+  & #flag{ transform: rotate(-90deg); }
+  & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+  & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+  & .bubble{ opacity: 1; }
+  & .dot1{ animation: dot1 1s ease-in-out infinite; }
+  & .dot2{ animation: dot2 1s ease-in-out infinite; }
+  & .dot3{ animation: dot3 1s ease-in-out infinite; }
+}
+
+.contact{
+  & #flag{
+    transition: transform .5s ease;
+    transform-origin: 42.5% 7%;
+  }
+  & .bubble{
+    transition: opacity .5s ease;
+  }
+}
+
+@keyframes mail{
+  from { transform: translate(18px, 20px); }
+  to   { transform: translate(29px, 20px); }
+}
+@keyframes floating{
+  from { transform: translate(65px, 25px); }
+  to   { transform: translate(75px, 20px); }
+}
+@keyframes dot1{
+  from { opacity: 0; }
+  10%  { opacity: 0; }
+  20%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot2{
+  from { opacity: 0; }
+  40%  { opacity: 0; }
+  50%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes dot3{
+  from { opacity: 0; }
+  70%  { opacity: 0; }
+  80%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+
+/***************** mobile ********************/
+@media screen and (max-width: 800px) {
+  .home-intro {
+    font-size: .9em;
+    & > .content {
+      padding: 8em 0;
+    }
+  }
+
+  .home-projects {
+    display: block;
+    font-size: .9em;
+
+    & h2 {
+      font-size: 2em;
+    }
+    & .text {
+      margin-bottom: 5em;
+      position: relative;
+      top: -4em;
+    }
+  }
+
+  .-cosigner-hero {
+    padding: 0;
+  }
+
+  .home-contacts-container {
+    display: block;
+  }
+  .contact {
+    padding: 0;
+    display: block;
+    width: auto;
+    margin-bottom: 4em;
+  }
+
+  .contact{
+    & #flag{ transform: rotate(-90deg); }
+    & #mail{ animation: mail alternate .8s ease-in-out infinite; }
+    & #balloon{ animation: floating alternate 1s ease-in-out infinite; }
+    & .bubble{ opacity: 1; }
+    & .dot1{ animation: dot1 1s ease-in-out infinite; }
+    & .dot2{ animation: dot2 1s ease-in-out infinite; }
+    & .dot3{ animation: dot3 1s ease-in-out infinite; }
+  }
+}

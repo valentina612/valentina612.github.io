@@ -1,0 +1,141 @@
+:root {
+  --primary: #FDB92D;
+}
+
+/* ---------------- base ---------------- */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Karla', 'Helvetica', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1000px){
+  html, body{
+    font-size: 14px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+p, li, h4{
+  color: #666;
+  margin: .8em 0;
+}
+h3:not(:first-child), h4:not(:first-child) {
+  margin-top: 1.5em;
+}
+ul, ol {
+  padding-left: 1em;
+}
+
+img, video {
+  width: 100%;
+  max-width: 100%;
+}
+
+/****************** typography ******************/
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  font-size: 1.8em;
+  top: -.1em;  /* Offset to align with small font on the right */
+}
+
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.2em;
+}
+
+._primary-link{
+  display: inline-flex;
+  align-items: center;
+  margin: 8px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+._primary-link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: .8em;
+  background: var(--primary);
+  opacity: .3;
+}
+._primary-link:after{
+  content: '';
+  height: 1em;
+  width: 1em;
+  background-image: url(/assets/link_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: .5em;
+}
+
+.center {
+  text-align: center;
+}
+
+/****************** layout ******************/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.equal-col {
+  display: flex;
+  align-items: flex-start;
+
+  &.vert-center {
+    align-items: center;
+  }
+
+  & > * {
+    width: 0;
+    flex: 1 0 0;
+  }
+  & > * + * {
+    padding-left: 3em;
+  }
+}
+
+
+/***************** mobile ********************/
+@media screen and (max-width: 800px) {
+  h3:not(:first-child), h4:not(:first-child) {
+    margin-top: 3em;
+  }
+  
+  main {
+    padding: 0 1em;
+  }
+
+  .equal-col {
+    display: block;
+    & > * {
+      width: auto;
+    }
+    & > * + * {
+      padding-left: initial;
+    }
+  }
+}
