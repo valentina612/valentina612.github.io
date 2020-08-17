@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="546px" viewBox="0 0 200 546" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="87.9418104%" y1="28.7095883%" x2="0%" y2="72.1222729%" id="linearGradient-1">
+            <stop stop-color="#8AFDE9" offset="0%"></stop>
+            <stop stop-color="#FBEDA1" offset="44.4826714%"></stop>
+            <stop stop-color="#EBACAF" offset="100%"></stop>
+            <stop stop-color="#F1D1D1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-page" transform="translate(-248.000000, -134.000000)">
+            <g id="Group-13" transform="translate(248.000000, 135.000000)">
+                <circle id="Oval" fill="url(#linearGradient-1)" cx="100" cy="208" r="100"></circle>
+                <line x1="100.5" y1="0.5" x2="100.5" y2="143.5" id="Line-2" stroke="#979797" stroke-width="2" stroke-linecap="square"></line>
+                <line x1="100.5" y1="280.5" x2="99.5" y2="543.5" id="Line-2" stroke="#979797" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>

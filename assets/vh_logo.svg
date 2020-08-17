@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>VH logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="VH-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="300" height="300"></rect>
+        <g id="Logo">
+            <g id="Group-4" transform="translate(51.063830, 102.127660)">
+                <rect id="Rectangle" fill="#EEBCBE" x="154.856614" y="34.8162476" width="27" height="17.4081238"></rect>
+                <rect id="Rectangle" fill="#EEBCBE" x="120.444033" y="0" width="17.2062905" height="95.7446809"></rect>
+                <rect id="Rectangle" fill="#EEBCBE" x="180.66605" y="0" width="17.2062905" height="95.7446809"></rect>
+                <polygon id="Rectangle" fill="#EEBCBE" points="0 0 17.0917779 0 43.0157262 95.7446809 25.8399379 95.7446809"></polygon>
+                <polygon id="Rectangle" fill="#EEBCBE" transform="translate(55.920444, 47.872340) scale(-1, 1) translate(-55.920444, -47.872340) " points="34.4125809 0 51.5043589 0 77.4283071 95.7446809 60.2525188 95.7446809"></polygon>
+                <polygon id="Rectangle" fill="#FFFFFF" points="17.2062905 0 34.2980684 0 60.2220167 95.7446809 43.0462283 95.7446809"></polygon>
+            </g>
+            <rect id="Rectangle" stroke="#EEBCBE" stroke-width="9" x="4.5" y="4.5" width="291" height="291"></rect>
+        </g>
+    </g>
+</svg>
